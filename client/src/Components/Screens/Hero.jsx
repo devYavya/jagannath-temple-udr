@@ -39,7 +39,7 @@ function Hero() {
     const shloka = getDailyShloka();
     setDailyShloka(shloka);
     requestNotificationPermission();
-  }, []);
+  }, [requestNotificationPermission]);
 
   return (
     <div
