@@ -7,6 +7,7 @@ import Login from "./Components/Admin/Login";
 import Dashboard from "./Components/Admin/Dashboard";
 import SideNav from "./Components/Admin/Sidenav";
 import Footer from "./Components/Ui/Footer";
+import About from "./Components/Ui/About";
 
 function App() {
   return (
@@ -34,6 +35,16 @@ function App() {
             }
           />
 
+          <Route
+            path="/about"
+            element={
+              <>
+                <Navbar />
+                <About />
+                <Footer />
+              </>
+            }
+          />
           <Route
             path="/admin/*"
             element={

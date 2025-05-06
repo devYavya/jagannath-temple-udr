@@ -1,0 +1,90 @@
+.about-container {
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, #fff8e1, #fefae0);
+    font-family: 'Merriweather', serif;
+    color: #5c3317;
+    max-width: 1000px;
+    margin: 3rem auto;
+    line-height: 1.9;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.2);
+    border: 2px solid #e0c285;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150%;
+    height: 150%;
+    /* background-image: url('../assets/mandala-bg.png'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.about-title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #8b0000;
+    text-shadow: 1px 1px 4px rgba(255, 153, 0, 0.6);
+    z-index: 1;
+    position: relative;
+}
+
+.about-subtitle {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    color: #b3541e;
+    text-shadow: 1px 1px 2px rgba(255, 204, 0, 0.5);
+    z-index: 1;
+    position: relative;
+}
+
+.about-description,
+.about-container p {
+    font-size: 1.15rem;
+    margin-bottom: 1.1rem;
+    z-index: 1;
+    position: relative;
+}
+
+.about-container p::first-letter {
+    font-size: 1.5rem;
+    color: #c99a00;
+    font-weight: bold;
+}
+
+.about-container ul {
+    list-style-type: square;
+    margin-left: 1.5rem;
+}
+
+.about-container ul li {
+    margin: 0.6rem 0;
+    color: #5c2c06;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 2rem 1rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .about-description,
+    .about-container p {
+        font-size: 1rem;
+    }
+}

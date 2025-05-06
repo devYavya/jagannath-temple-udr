@@ -6,40 +6,41 @@ import shlokasData from "../assets/shlokas.json";
 import "../../Styles/Hero.css";
 import GallerySection from "../Ui/GallerySection";
 
+// ✅ Utility functions moved outside component for stability
+const sendPushNotification = (shloka) => {
+  const title = "Today's Shloka from Bhagavad Gita";
+  const options = {
+    body: `${shloka.shloka}\n\n${shloka.translation}`,
+    timestamp: Date.now(),
+  };
+  new Notification(title, options);
+};
+
+const requestNotificationPermission = (shloka) => {
+  if ("Notification" in window) {
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        sendPushNotification(shloka);
+      }
+    });
+  }
+};
+
 function Hero() {
   const [dailyShloka, setDailyShloka] = useState({});
 
   const getDailyShloka = () => {
     const today = new Date();
-    const dayOfYear = today.getDate();
+    const dayOfYear = today.getDate(); // Can be improved with a proper day-of-year calc
     const shlokaIndex = dayOfYear % shlokasData.length;
     return shlokasData[shlokaIndex];
-  };
-
-  const requestNotificationPermission = () => {
-    if ("Notification" in window) {
-      Notification.requestPermission().then((permission) => {
-        if (permission === "granted") {
-          sendPushNotification();
-        }
-      });
-    }
-  };
-
-  const sendPushNotification = () => {
-    const title = "Today's Shloka from Bhagavad Gita";
-    const options = {
-      body: `${dailyShloka.shloka}\n\n${dailyShloka.translation}`,
-      timestamp: Date.now(),
-    };
-    new Notification(title, options);
   };
 
   useEffect(() => {
     const shloka = getDailyShloka();
     setDailyShloka(shloka);
-    requestNotificationPermission();
-  }, [requestNotificationPermission]);
+    requestNotificationPermission(shloka);
+  }, []); // ✅ Stable, clean dependency array
 
   return (
     <div
@@ -76,10 +77,8 @@ function Hero() {
         <Link to="/donate" className="hero-donate-button">
           Make a Donation
         </Link>
-
-        {/* Using the GallerySection component here */}
         <GallerySection />
-
+        
         <motion.div
           className="hero-info-box"
           initial={{ opacity: 0, y: 20 }}
