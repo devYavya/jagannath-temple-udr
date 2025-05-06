@@ -1,109 +1,99 @@
-/* Navbar Container */
+/* Navbar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
 .navbar {
-    position: fixed;
+    background-color: #fff7e6;
+    border-bottom: 2px solid #d4af37;
+    font-family: 'Merriweather', serif;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Transparent background */
-    padding: 10px 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .navbar-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Navbar Logo */
 .navbar-logo {
     display: flex;
     align-items: center;
-    color: #fff;
     text-decoration: none;
+    color: #b77c02;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .navbar-logo img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
 }
 
-.navbar-logo span {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Menu Toggle (Hamburger) */
 .menu-toggle {
     display: none;
+    font-size: 1.5rem;
     background: none;
     border: none;
-    color: white;
-    font-size: 30px;
+    color: #b77c02;
     cursor: pointer;
 }
 
-/* Navbar Links */
 .navbar-menu {
-    display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    gap: 1rem;
 }
 
-.navbar-menu li {
-    margin: 0 15px;
-}
-
-.navbar-menu a {
+.navbar-menu li a {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s;
+    color: #6a4e01;
+    padding: 0.5rem 0.75rem;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.navbar-menu a:hover {
-    color: #f39c12;
-    /* Highlight on hover */
-}
-
-.navbar-menu .active {
-    color: #f39c12;
-    /* Active link color */
-}
-
-.donate-btn {
-    background-color: #f39c12;
-    padding: 8px 15px;
+.navbar-menu li a:hover {
+    background-color: #f8e6c1;
     border-radius: 5px;
+    color: #b77c02;
 }
 
-/* Mobile View */
-@media screen and (max-width: 768px) {
+/* Responsive styles */
+@media (max-width: 768px) {
     .menu-toggle {
         display: block;
     }
 
     .navbar-menu {
+        flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 64px;
         left: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        align-items: center;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
+        background-color: #fff7e6;
+        padding: 1rem;
+        display: none;
+        border-top: 1px solid #d4af37;
     }
 
     .navbar-menu.open {
-        transform: translateY(0);
+        display: flex;
     }
 
     .navbar-menu li {
-        margin: 20px 0;
+        margin: 0.5rem 0;
+    }
+
+    .navbar-container {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }

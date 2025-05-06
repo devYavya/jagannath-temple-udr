@@ -6,7 +6,7 @@ function About() {
     <div className="about-container">
       <h1 className="about-title">About Jagannath Temple</h1>
       <p className="about-description">
-        The Jagannath Temple, located in Puri, Odisha, is one of the most
+        The Jagannath Temple, located in Udaipur, Rajasthan, is one of the most
         revered and ancient temples in India. Dedicated to Lord Jagannath, a
         form of Lord Vishnu, the temple stands as a symbol of spiritual
         devotion, rich cultural heritage, and architectural brilliance.

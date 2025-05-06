@@ -10,7 +10,6 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <a href="/" className="navbar-logo">
           <img src={logo} alt="Jagannath Logo" />
           <span>
@@ -33,16 +32,16 @@ function Navbar() {
               About
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="/events" onClick={() => setMenuOpen(false)}>
               Events
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a href="/timings" onClick={() => setMenuOpen(false)}>
               Timings
             </a>
-          </li>
+          </li> */}
           {/* <li>
             <a
               href="/donate"
