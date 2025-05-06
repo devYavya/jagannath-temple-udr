@@ -1,43 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.jpg" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="hi">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>जगन्नाथ धाम | मंदिर गुप्तेश्वर नगर, सेक्टर 7 उदयपुर (राजस्थान).</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Basic Meta Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#d4af37" />
+  <meta name="description"
+    content="जगन्नाथ धाम मंदिर | सेक्टर 7, गुप्तेश्वर नगर, उदयपुर - आध्यात्मिकता, भक्ति और शांति का केंद्र।" />
+  <meta name="keywords"
+    content="Jagannath Temple, जगन्नाथ मंदिर, उदयपुर मंदिर, धार्मिक स्थल, भगवान जगन्नाथ, राजस्थान मंदिर, Rath Yatra, पूजा, Bhajan, Aarti, Bhakti" />
+  <meta name="author" content="Jagannath Dham Trust" />
+  <meta name="robots" content="index, follow" />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- Open Graph Tags for Social Media Sharing -->
+  <meta property="og:title" content="जगन्नाथ धाम | मंदिर गुप्तेश्वर नगर, उदयपुर" />
+  <meta property="og:description"
+    content="पधारो हमारे जगन्नाथ धाम, जहाँ भक्ति और श्रद्धा का संगम होता है। जानें मंदिर के दर्शन, पूजा, रथ यात्रा और अधिक।" />
+  <meta property="og:image" content="%PUBLIC_URL%/logo.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="जगन्नाथ धाम | मंदिर गुप्तेश्वर नगर, उदयपुर" />
+  <meta name="twitter:description" content="राजस्थान के प्रसिद्ध भगवान जगन्नाथ मंदिर का आधिकारिक पृष्ठ।" />
+  <meta name="twitter:image" content="%PUBLIC_URL%/logo.jpg" />
+
+  <!-- Favicon and Icons -->
+  <link rel="icon" href="%PUBLIC_URL%/logo.jpg" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.jpg" />
+
+  <!-- Manifest (PWA Support) -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Web Font for Devotional Feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+
+  <title>जगन्नाथ धाम | मंदिर गुप्तेश्वर नगर, सेक्टर 7, उदयपुर (राजस्थान)</title>
+
+  <!-- Structured Data (JSON-LD for Google Rich Snippets) -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HinduTemple",
+        "name": "जगन्नाथ धाम",
+        "description": "भगवान जगन्नाथ को समर्पित एक आध्यात्मिक स्थल | सेक्टर 7, गुप्तेश्वर नगर, उदयपुर",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Udaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "313001",
+          "streetAddress": "Gupteshwar Nagar, Sector 7"
+        },
+        "image": "%PUBLIC_URL%/logo.jpg",
+        "openingHours": "Mo-Su 05:00-21:00",
+        "url": "https://yourdomain.com"
+      }
+    </script>
+</head>
+
+<body>
+  <noscript>इस वेबसाइट को चलाने के लिए कृपया JavaScript सक्षम करें।</noscript>
+  <div id="root"></div>
+</body>
+
 </html>

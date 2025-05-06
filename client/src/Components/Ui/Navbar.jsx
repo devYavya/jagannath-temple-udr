@@ -43,7 +43,7 @@ function Navbar() {
               Timings
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="/donate"
               className="donate-btn"
@@ -51,7 +51,7 @@ function Navbar() {
             >
               Donate
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
