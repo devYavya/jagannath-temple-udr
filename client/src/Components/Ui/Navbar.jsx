@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom"; 
 import "../../Styles/Navbar.css";
 import logo from "../assets/logo.jpg";
+import i18n from "./i18n";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); 
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const isAboutPage = location.pathname === "/about"; 
 
   return (
     <nav className="navbar">
@@ -28,29 +32,21 @@ function Navbar() {
             </a>
           </li>
           <li>
+            <a href="/gallery" onClick={() => setMenuOpen(false)}>
+              Gallery
+            </a>
+          </li>
+          <li>
             <a href="/about" onClick={() => setMenuOpen(false)}>
               About
             </a>
           </li>
-          {/* <li>
-            <a href="/events" onClick={() => setMenuOpen(false)}>
-              Events
-            </a>
-          </li> */}
-          {/* <li>
-            <a href="/timings" onClick={() => setMenuOpen(false)}>
-              Timings
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="/donate"
-              className="donate-btn"
-              onClick={() => setMenuOpen(false)}
-            >
-              Donate
-            </a>
-          </li> */}
+            {isAboutPage && (
+  <div className="language-switcher">
+    <button onClick={() => i18n.changeLanguage("en")}>🇬🇧 English</button>
+    <button onClick={() => i18n.changeLanguage("hi")}>🇮🇳 हिंदी</button>
+  </div>
+)}
         </ul>
       </div>
     </nav>

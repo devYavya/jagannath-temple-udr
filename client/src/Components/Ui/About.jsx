@@ -1,46 +1,26 @@
 import React from "react";
-import "../../Styles/About.css"; 
+import "../../Styles/About.css";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const { t } = useTranslation();
+
   return (
     <div className="about-container">
-      <h1 className="about-title">About Jagannath Temple</h1>
-      <p className="about-description">
-        The Jagannath Temple, located in Udaipur, Rajasthan, is one of the most
-        revered and ancient temples in India. Dedicated to Lord Jagannath, a
-        form of Lord Vishnu, the temple stands as a symbol of spiritual
-        devotion, rich cultural heritage, and architectural brilliance.
-      </p>
+      <h1 className="about-title">{t("about_title")}</h1>
+      <p className="about-description">{t("about_description")}</p>
 
-      <h2 className="about-subtitle">Spiritual Significance</h2>
-      <p>
-        The temple is renowned for the annual Rath Yatra, where the deities
-        Jagannath, Balabhadra, and Subhadra are carried out in grand chariots.
-        Millions of devotees visit the temple every year seeking divine
-        blessings and inner peace.
-      </p>
+      <h2 className="about-subtitle">{t("spiritual_significance")}</h2>
+      <p>{t("spiritual_text")}</p>
 
-      <h2 className="about-subtitle">Architecture</h2>
-      <p>
-        Built in the Kalinga style of architecture, the temple features towering
-        spires, intricate carvings, and a deep sanctum that resonates with
-        ancient Vedic chants. It is considered one of the Char Dham pilgrimage
-        sites.
-      </p>
+      <h2 className="about-subtitle">{t("architecture")}</h2>
+      <p>{t("architecture_text")}</p>
 
-      <h2 className="about-subtitle">Open to All</h2>
-      <p>
-        This sacred space welcomes people from all walks of life. The temple not
-        only serves as a spiritual center but also as a hub for cultural
-        activities, charitable work, and religious education.
-      </p>
+      <h2 className="about-subtitle">{t("open_to_all")}</h2>
+      <p>{t("open_text")}</p>
 
-      <h2 className="about-subtitle">Our Mission</h2>
-      <p>
-        To spread the divine teachings of Lord Jagannath and preserve the
-        temple’s rich traditions while embracing modern technology to reach
-        devotees worldwide.
-      </p>
+      <h2 className="about-subtitle">{t("our_mission")}</h2>
+      <p>{t("mission_text")}</p>
     </div>
   );
 }

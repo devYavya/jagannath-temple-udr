@@ -1,99 +1,592 @@
+/* Login.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Literata:ital,wght@1,400&display=swap');
+
+*{
+            font-family: 'Cinzel', serif;
+}
 .login-container {
-    width: 100%;
+    background: linear-gradient(to bottom, #fff7e6, #ffd89b);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../Components/assets/jagganath-temple.jpg');
+    /* optional temple image background */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(2px);
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
     max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f0f0f0;
+    width: 100%;
+    font-family: 'Literata', serif;
+}
+
+.login-symbol {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.login-title {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    color: #b35c00;
+    margin-bottom: 10px;
+}
+
+.shloka {
+    font-style: italic;
+    font-size: 14px;
+    color: #7a4b00;
+    margin-bottom: 20px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6ad60;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
-.login-container input {
+.login-button {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+    padding: 12px;
+    background-color: #d98c00;
     color: white;
+    font-size: 16px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-.login-container button:hover {
-    background-color: #45a049;
+.login-button:hover {
+    background-color: #a06200;
 }
 
 .error {
     color: red;
     font-size: 14px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Literata:ital,wght@1,400&display=swap');
 
-.admin-dashboard {
-    padding: 20px;
+/* Layout Container */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #fff9f0;
+    font-family: 'Cinzel', serif;
 }
 
-.admin-dashboard h2 {
-    text-align: center;
-}
-
-.admin-dashboard h3 {
-    margin-top: 20px;
-}
-
-.admin-dashboard ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.admin-dashboard li {
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
-
-/* SideNav.css */
-
+/* ===========================
+   🌸 SIDENAV STYLES
+   =========================== */
 .sidenav {
-    height: 100%;
     width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    padding-top: 20px;
-    color: white;
+            height: 100vh;
+    background: linear-gradient(to bottom, #fff4e6, #ffe0b2);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    flex-shrink: 0;
 }
 
-.sidenav h3 {
+.sidenav-header {
     text-align: center;
-    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.sidenav-logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.sidenav-title {
+    font-size: 20px;
+    color: #b25c00;
+}
+
+.sidenav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidenav-links a {
+    text-decoration: none;
+    color: #704214;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s;
+}
+
+.sidenav-links a:hover,
+.sidenav-links .active {
+    background-color: #f5b66c;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ===========================
+   🕉️ DASHBOARD STYLES
+   =========================== */
+.dashboard-container {
+    flex-grow: 1;
+    padding: 40px;
+    background: #fff9f0;
+}
+
+.dashboard-title {
+    font-size: 2.5rem;
+    color: #b25c00;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+    font-size: 1.2rem;
+    color: #8c6239;
+    margin-bottom: 2rem;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffe0b2, #fff4e6);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h2 {
+    color: #bf6516;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.5rem;
+    color: #4e342e;
+    font-weight: bold;
+}
+
+.recent-activities {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 8px #f5c26b;
+}
+
+.recent-activities h2 {
+    margin-bottom: 15px;
+    color: #b25c00;
+}
+
+.recent-activities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recent-activities li {
+    margin-bottom: 10px;
+    color: #5d4037;
+    font-weight: 500;
+}
+
+/* ===========================
+   📱 RESPONSIVENESS
+   =========================== */
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .sidenav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .sidenav-header {
+        display: none;
+    }
+
+    .sidenav-links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .sidenav-links a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .dashboard-title {
+        font-size: 2rem;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+    }
+}
+/* Admin Page Layout */
+/* Admin Container Layout */
+.admin-container {
+    display: flex;
+    background: #fff9f0;
+        font-family: 'Cinzel', serif;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    /* Offset for the sidebar */
+}
+
+/* Donation Management Title */
+.donation-management-title {
+    font-size: 32px;
+    color: #5d4037;
     margin-bottom: 20px;
 }
 
-.sidenav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidenav ul li {
-    padding: 10px 15px;
-}
-
-.sidenav ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
+.donation-management-subtitle {
     font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
 }
 
-.sidenav ul li a:hover {
-    background-color: #575757;
+/* ===========================
+   🎨 DONATIONS TABLE STYLES
+   =========================== */
+.donations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for the table */
+    border-radius: 8px;
+    /* Rounded corners for the table */
+    background: linear-gradient(145deg, #fff4e6, #ffe0b2);
+    /* Gradient background for table */
+}
+
+.donations-table th,
+.donations-table td {
+    padding: 15px 20px;
+    /* More padding for better readability */
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.donations-table th {
+    background: linear-gradient(145deg, #ffeb99, #ffd86d);
+    /* Light gradient background for headers */
+    color: #5d4037;
+    /* Dark brown color for header text */
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    /* Rounded corners for the header */
+}
+
+.donations-table td {
+    background: #fff7e6;
+    /* Light background for table rows */
+    color: #5d4037;
+    /* Dark brown text */
+    border-radius: 8px;
+    /* Rounded corners for table cells */
+    transition: background-color 0.3s ease;
+    /* Smooth background transition */
+}
+
+.donations-table tr:hover td {
+    background-color: #f1d49e;
+    /* Highlight row on hover */
+}
+
+.donations-table tr:nth-child(odd) td {
+    background-color: #f9f0d3;
+    /* Light alternate row color */
+}
+
+.donations-table tr:nth-child(even) td {
+    background-color: #fff7e6;
+    /* Light alternate row color */
+}
+
+.donations-table .completed {
+    background-color: #dff0d8;
+    font-weight: bold;
+}
+
+.donations-table .pending {
+    background-color: #f2dede;
+    font-weight: bold;
+}
+
+/* ===========================
+   🎯 BUTTON STYLES
+   =========================== */
+.donation-actions button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.donation-actions button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    /* Subtle hover effect */
+}
+
+.donation-actions button:active {
+    background-color: #388e3c;
+    /* Darker shade on click */
+    transform: translateY(1px);
+    /* Slight press effect */
+}
+
+.donation-actions button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffb74d;
+    /* Focus outline with a soft shadow */
+}
+
+/* ===========================
+   📱 RESPONSIVENESS FOR DONATION PAGE
+   =========================== */
+@media (max-width: 768px) {
+
+    .donations-table th,
+    .donations-table td {
+        padding: 12px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .donations-table tr:hover td {
+        background-color: #f1d49e;
+    }
+
+    .donation-actions button {
+        font-size: 14px;
+        /* Adjust button size for smaller screens */
+        padding: 6px 12px;
+    }
+}
+
+.event-management-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* Main Content Area */
+.event-main-content {
+    /* Space for side navigation */
+    padding: 20px;
+    width: calc(100% - 250px);
+    background: #fff9f0;    overflow-y: auto;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Event Actions Section */
+.event-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.event-actions button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-actions button:hover {
+    background-color: #2980b9;
+}
+
+/* Events Table */
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.events-table th,
+.events-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.events-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.events-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.events-table td button {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.events-table td button:hover {
+    background-color: #c0392b;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.modal button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #2980b9;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #e74c3c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .event-management-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .events-table th,
+    .events-table td {
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .event-actions button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }

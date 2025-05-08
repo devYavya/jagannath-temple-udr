@@ -55,6 +55,9 @@ function Footer() {
           <p>Email: contact@jagannathtemple.org</p>
           <p>Phone: +91 12345 67890</p>
         </div>
+        <a href="/admin/Login" class="admin-login-btn">
+          Admin Login
+        </a>
       </div>
 
       <hr />

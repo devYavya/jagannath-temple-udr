@@ -1,0 +1,110 @@
+/* Root variables for colors and font */
+:root {
+    --primary-color: #8b4513;
+    /* spiritual earthy brown */
+    --secondary-color: #f4e1b5;
+    /* soft golden-beige background */
+    --accent-color: #b22222;
+    /* deep red */
+    --light-bg: #fffaf0;
+    --font-devotional: 'Cinzel', serif;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper Styling */
+.settings-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #fdf6e3, #fceabb);
+    font-family: var(--font-devotional);
+    color: var(--primary-color);
+    display: flex;
+        height: 100vh;
+        /* Full viewport height */
+        overflow: hidden;
+}
+
+/* Main content container */
+.settings-container {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-left: 5px solid var(--accent-color);
+    box-shadow: var(--shadow);
+    overflow-y: auto;
+    /* Enable vertical scroll */
+    height: 100vh;
+    /* Ensure full height for scrolling */
+    scroll-behavior: smooth;
+}
+
+/* Main title */
+.settings-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+    text-shadow: 1px 1px 2px #c49a6c;
+}
+
+/* Each section card */
+.section-card {
+    background-color: var(--secondary-color);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+    transform: scale(1.02);
+}
+
+/* Section headings */
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .settings-wrapper {
+        flex-direction: column;
+    }
+
+    .settings-container {
+        padding: 1rem;
+        border-left: none;
+        border-top: 5px solid var(--accent-color);
+    }
+
+    .settings-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Optional: Add devotional background pattern */
+body {
+    /* background-image: url('/images/pattern-temple.png'); */
+    /* Optional custom background */
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+/* Optional decorative border */
+.section-card::before {
+    content: '';
+    display: block;
+    height: 6px;
+    background: linear-gradient(to right, var(--accent-color), var(--primary-color), var(--accent-color));
+    margin: -1.5rem -1.5rem 1rem;
+    border-radius: 12px 12px 0 0;
+}

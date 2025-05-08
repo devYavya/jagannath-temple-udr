@@ -3,7 +3,6 @@
     background: linear-gradient(to bottom, #fff8e1, #fefae0);
     font-family: 'Merriweather', serif;
     color: #5c3317;
-    max-width: 1000px;
     margin: 3rem auto;
     line-height: 1.9;
     border-radius: 16px;
@@ -68,6 +67,31 @@
 .about-container ul li {
     margin: 0.6rem 0;
     color: #5c2c06;
+}
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.language-switcher button {
+    background-color: #d4af37;
+    /* golden */
+    color: #5e2605;
+    /* earthy text */
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #b78b0f;
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {

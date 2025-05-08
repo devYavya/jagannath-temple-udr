@@ -1,13 +1,16 @@
 .footer {
-    background-color: #1a202c;
-    /* Equivalent to Tailwind's bg-gray-900 */
-    color: white;
+    background: linear-gradient(to bottom, #fff4e6, #fcd9b8);
+    /* Sacred light saffron */
+    color: #5e2605;
+    /* Deep earthy tone */
     padding: 2.5rem 1.25rem;
+    font-family: 'Cinzel', serif;
+    border-top: 4px double #e0a958;
+    box-shadow: inset 0 5px 15px rgba(255, 204, 128, 0.3);
 }
 
 .footer-container {
     max-width: 72rem;
-    /* Equivalent to max-w-6xl */
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -22,22 +25,28 @@
 
 .footer h3 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.75rem;
+    color: #b25c00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .footer p,
 .footer ul li,
 .footer a {
     font-size: 0.875rem;
+    color: #5e2605;
 }
 
 .footer a {
     text-decoration: none;
-    color: white;
+    color: #804000;
+    transition: color 0.3s ease;
 }
 
 .footer a:hover {
+    color: #b25c00;
     text-decoration: underline;
 }
 
@@ -48,39 +57,57 @@
 }
 
 .footer .social-icons a {
-    color: white;
-    transition: color 0.3s ease;
+    color: #804000;
+    transition: transform 0.3s, color 0.3s;
+    font-size: 1.25rem;
 }
 
 .footer .social-icons a:hover:nth-child(1) {
     color: #3b82f6;
-    /* Facebook Blue */
 }
 
 .footer .social-icons a:hover:nth-child(2) {
-    color: #ec4899;
-    /* Instagram Pink */
+    color: #d946ef;
 }
 
 .footer .social-icons a:hover:nth-child(3) {
     color: #60a5fa;
-    /* Twitter Blue */
 }
 
 .footer .social-icons a:hover:nth-child(4) {
     color: #dc2626;
-    /* YouTube Red */
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.admin-login-btn {
+    background-color: #e9e8e6;
+    color: #fffaf0;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.5px;
+}
+
+.admin-login-btn:hover {
+    background-color: #e1bca1;
 }
 
 .footer hr {
     margin: 1.5rem 0;
-    border-color: #374151;
-    /* border-gray-700 */
+    border: none;
+    border-top: 2px dashed #b25c00;
+    opacity: 0.4;
 }
 
 .footer .footer-bottom {
     text-align: center;
     font-size: 0.875rem;
-    color: #9ca3af;
-    /* text-gray-400 */
+    color: #86592d;
+    margin-top: 1rem;
 }

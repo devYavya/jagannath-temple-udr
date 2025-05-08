@@ -1,24 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Admin.css"; 
-
-function Sidenav() {
+const Sidenav = () => {
   return (
     <div className="sidenav">
-      <h3>Admin Panel</h3>
-      <ul>
-        <li>
-          <Link to="/admin/dashboard">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/admin/manage-events">Manage Events</Link>
-        </li>
-        <li>
-          <Link to="/admin/settings">Settings</Link>
-        </li>
-      </ul>
+      <div className="sidenav-header">
+        {/* <img src="/om-symbol.png" alt="Om" className="sidenav-logo" /> */}
+        <h2 className="sidenav-title">Admin Panel</h2>
+      </div>
+      <nav className="sidenav-links">
+        <NavLink to="/admin/dashboard" activeclassname="active">
+          📊 Dashboard
+        </NavLink>
+        <NavLink to="/admin/donations" activeclassname="active">
+          💰 Donations
+        </NavLink>
+        <NavLink to="/admin/events" activeclassname="active">
+          📅 Events
+        </NavLink>
+        <NavLink to="/admin/settings" activeclassname="active">
+          ⚙️ Settings
+        </NavLink>
+        <NavLink to="/" activeclassname="active">
+          🚪 Logout
+        </NavLink>
+      </nav>
     </div>
   );
-}
+};
 
 export default Sidenav;

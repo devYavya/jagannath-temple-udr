@@ -90,6 +90,7 @@ function Donate() {
             🙏 Donate Now
           </button>
         </form>
+        <h2>OR</h2>
       </div>
     </section>
   );

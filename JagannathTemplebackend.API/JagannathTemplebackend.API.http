@@ -1,0 +1,6 @@
+@JagannathTemplebackend.API_HostAddress = http://localhost:5078
+
+GET {{JagannathTemplebackend.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
